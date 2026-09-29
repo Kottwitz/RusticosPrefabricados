@@ -29,7 +29,6 @@
             }
         }
     </script>
-    <!-- Seu arquivo CSS separado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-dark text-white font-body antialiased leading-relaxed">
@@ -37,8 +36,6 @@
     <!-- CABEÇALHO -->
     <header id="header" class="bg-darker sticky top-0 z-50 border-b border-neutral-800 transition-shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-            
-            <!-- LOGO E NOME -->
             <div class="flex items-center gap-3">
                 <img src="img/logo.png" alt="Logo Rústicos" class="h-10 w-auto object-contain">
                 <div>
@@ -47,7 +44,6 @@
                 </div>
             </div>
             
-            <!-- Menu Desktop -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#hero" class="font-semibold text-sm hover:text-primary transition-colors">Início</a>
                 <a href="#servicos" class="font-semibold text-sm hover:text-primary transition-colors">Tipos</a>
@@ -60,7 +56,6 @@
                 <a href="https://wa.me/554791628419?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="bg-primary hover:bg-primary-hover text-white font-heading font-semibold text-xs py-3 px-5 rounded transition-all shadow-lg">SOLICITAR ORÇAMENTO</a>
             </div>
 
-            <!-- Botão Menu Mobile -->
             <button id="menu-btn" class="md:hidden text-white focus:outline-none p-2 cursor-pointer">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -68,7 +63,6 @@
             </button>
         </div>
 
-        <!-- Menu Mobile Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-darker border-b border-neutral-800 px-4 pt-2 pb-6 space-y-3">
             <a href="#hero" class="block font-semibold hover:text-primary py-1">Início</a>
             <a href="#servicos" class="block font-semibold hover:text-primary py-1">Tipos</a>
@@ -99,7 +93,6 @@
             <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-center text-primary mb-12 uppercase tracking-wide">TIPOS E SERVIÇOS</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- CARD CASA -->
                 <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
                     <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('https://images.pexels.com/photos/14459280/pexels-photo-14459280.jpeg');"></div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -107,13 +100,10 @@
                             <h3 class="font-heading font-bold text-xl mb-2">CASAS</h3>
                             <p class="text-neutral-400 text-sm mb-6">Projetos residenciais completos, do fundamento ao acabamento.</p>
                         </div>
-                        <div>
-                            <a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a>
-                        </div>
+                        <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
                     </div>
                 </div>
 
-                <!-- CARD CHALÉ -->
                 <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
                     <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('https://i.pinimg.com/1200x/f3/d4/38/f3d4389d36644e8fd9c29ff3fe3698cd.jpg');"></div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -121,13 +111,10 @@
                             <h3 class="font-heading font-bold text-xl mb-2">CHALÉS</h3>
                             <p class="text-neutral-400 text-sm mb-6">Modelos aconchegantes com aparência robusta e rústica.</p>
                         </div>
-                        <div>
-                            <a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a>
-                        </div>
+                        <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
                     </div>
                 </div>
 
-                <!-- CARD SOBRADO -->
                 <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
                     <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('https://i.pinimg.com/736x/12/b2/67/12b267843c6d1234bd291f1bbae1845d.jpg');"></div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -135,13 +122,10 @@
                             <h3 class="font-heading font-bold text-xl mb-2">SOBRADOS</h3>
                             <p class="text-neutral-400 text-sm mb-6">Estruturas de dois andares otimizando o espaço do seu terreno.</p>
                         </div>
-                        <div>
-                            <a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a>
-                        </div>
+                        <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
                     </div>
                 </div>
 
-                <!-- CARD PERGOLADO -->
                 <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
                     <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('https://i.pinimg.com/736x/e0/aa/f3/e0aaf3d83fdac3ec742fd98966121094.jpg');"></div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -149,13 +133,10 @@
                             <h3 class="font-heading font-bold text-xl mb-2">PERGOLADOS</h3>
                             <p class="text-neutral-400 text-sm mb-6">Estruturas externas elegantes e funcionais em madeira.</p>
                         </div>
-                        <div>
-                            <a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a>
-                        </div>
+                        <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
                     </div>
                 </div>
 
-                <!-- CARD DECK -->
                 <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
                     <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('https://i.pinimg.com/736x/04/fc/75/04fc750434f3a6e6efae5f1cda90a4f0.jpg');"></div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -163,13 +144,10 @@
                             <h3 class="font-heading font-bold text-xl mb-2">DECKS</h3>
                             <p class="text-neutral-400 text-sm mb-6">Pisos externos em madeira de lei de alta durabilidade.</p>
                         </div>
-                        <div>
-                            <a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a>
-                        </div>
+                        <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
                     </div>
                 </div>
 
-                <!-- CARD MÓVEIS RÚSTICOS -->
                 <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
                     <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('https://i.pinimg.com/736x/18/b5/e5/18b5e5c7c4f71bec80a219a6f0cbc7bc.jpg');"></div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -177,9 +155,7 @@
                             <h3 class="font-heading font-bold text-xl mb-2">MÓVEIS RÚSTICOS</h3>
                             <p class="text-neutral-400 text-sm mb-6">Namoradeiras, bancos, mesas e peças exclusivas sob medida.</p>
                         </div>
-                        <div>
-                            <a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a>
-                        </div>
+                        <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
                     </div>
                 </div>
 
@@ -194,8 +170,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-6 border border-dashed border-primary rounded-lg text-center">
                     <h3 class="font-heading font-bold text-lg text-primary mb-4">Madeiras Nobres</h3>
-                    <p class="text-sm text-neutral-300"><strong>Pinus Tratado:</strong> Autoclave para resistência a insetos e intempéries.<br><br>
-                    <strong>Angelin:</strong> Madeira de lei resistente a cupins.</p>
+                    <p class="text-sm text-neutral-300"><strong>Pinus Tratado:</strong> Autoclave para resistência a insetos e intempéries.<br><br><strong>Angelin:</strong> Madeira de lei resistente a cupins.</p>
                 </div>
                 <div class="p-6 border border-dashed border-primary rounded-lg text-center">
                     <h3 class="font-heading font-bold text-lg text-primary mb-4">Acabamentos</h3>
@@ -209,34 +184,43 @@
         </div>
     </section>
 
-    <!-- OBRAS (PORTFÓLIO) -->
-    <section id="obras" class="py-20">
+    <!-- OBRAS E TRABALHOS (SEÇÃO REFEITA E OTIMIZADA PARA MOBILE) -->
+    <section id="obras" class="py-20 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-center text-primary mb-8 uppercase tracking-wide">OBRAS E TRABALHOS</h2>
             
-            <!-- Botões de Filtro -->
-            <div class="flex flex-wrap justify-center gap-3 mb-10">
-                <button class="filter-btn active bg-primary text-white border border-primary px-5 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer" data-filter="all">Todos</button>
-                <button class="filter-btn bg-transparent text-neutral-300 border border-neutral-600 hover:border-primary px-5 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer" data-filter="casas">Casas</button>
-                <button class="filter-btn bg-transparent text-neutral-300 border border-neutral-600 hover:border-primary px-5 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer" data-filter="chales">Chalés</button>
-                <button class="filter-btn bg-transparent text-neutral-300 border border-neutral-600 hover:border-primary px-5 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer" data-filter="estruturas">Pergolados/Decks</button>
-                <button class="filter-btn bg-transparent text-neutral-300 border border-neutral-600 hover:border-primary px-5 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer" data-filter="moveis">Móveis Rústicos</button>
+            <!-- Botões de Filtro Responsivos (Scroll horizontal no mobile se necessário) -->
+            <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 mb-10 overflow-x-auto pb-3 sm:pb-0 scrollbar-none">
+                <button class="filter-btn active shrink-0 bg-primary text-white border border-primary px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow" data-filter="all">Todos</button>
+                <button class="filter-btn shrink-0 bg-transparent text-neutral-300 border border-neutral-700 hover:border-primary px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer" data-filter="casas">Casas</button>
+                <button class="filter-btn shrink-0 bg-transparent text-neutral-300 border border-neutral-700 hover:border-primary px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer" data-filter="chales">Chalés</button>
+                <button class="filter-btn shrink-0 bg-transparent text-neutral-300 border border-neutral-700 hover:border-primary px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer" data-filter="estruturas">Pergolados/Decks</button>
+                <button class="filter-btn shrink-0 bg-transparent text-neutral-300 border border-neutral-700 hover:border-primary px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer" data-filter="moveis">Móveis Rústicos</button>
             </div>
 
-            <!-- Grid da Galeria -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="portfolio-item casas h-64 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+            <!-- Grid Grid Otimizado Mobile: 1 coluna no celular, 2 no tablet, 4 no desktop -->
+            <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Card 1: Casas -->
+                <div class="portfolio-item casas h-60 sm:h-64 rounded-xl shadow-lg overflow-hidden border border-neutral-800 transition-all duration-300 hover:scale-[1.02]" data-category="casas">
                     <img src="img/Sobrado.png" alt="Sobrado" class="w-full h-full object-cover">
                 </div>
-                <div class="portfolio-item chales h-64 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+
+                <!-- Card 2: Chalés -->
+                <div class="portfolio-item chales h-60 sm:h-64 rounded-xl shadow-lg overflow-hidden border border-neutral-800 transition-all duration-300 hover:scale-[1.02]" data-category="chales">
                     <img src="img/Chale.png" alt="Chalé" class="w-full h-full object-cover">
                 </div>
-                <div class="portfolio-item estruturas h-64 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+
+                <!-- Card 3: Estruturas -->
+                <div class="portfolio-item estruturas h-60 sm:h-64 rounded-xl shadow-lg overflow-hidden border border-neutral-800 transition-all duration-300 hover:scale-[1.02]" data-category="estruturas">
                     <img src="img/estrutura.jpg" alt="Estrutura" class="w-full h-full object-cover">
                 </div>
-                <div class="portfolio-item moveis h-64 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+
+                <!-- Card 4: Móveis Rústicos (Namoradeira) -->
+                <div class="portfolio-item moveis h-60 sm:h-64 rounded-xl shadow-lg overflow-hidden border border-neutral-800 transition-all duration-300 hover:scale-[1.02]" data-category="moveis">
                     <img src="https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg" alt="Namoradeira" class="w-full h-full object-cover">
                 </div>
+
             </div>
         </div>
     </section>
@@ -251,7 +235,6 @@
                 </p>
                 <div class="pt-4">
                     <a href="https://wa.me/554791628419?text=Olá!%20Gostaria%20de%20tirar%20dúvidas%20e%20fazer%20um%20orçamento." target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-white font-heading font-bold text-base sm:text-lg py-4 px-8 rounded-lg transition-all shadow-xl cursor-pointer">
-                        <!-- Ícone do WhatsApp -->
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                         </svg>
@@ -278,7 +261,7 @@
         </div>
     </footer>
 
-    <!-- Chamada do arquivo JavaScript separado -->
+    <!-- Script Atualizado e Otimizado -->
     <script src="script.js"></script>
 </body>
 </html>
