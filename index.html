@@ -86,8 +86,10 @@
         <div class="absolute inset-0 bg-black/75 z-0"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="max-w-2xl">
-                <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl uppercase leading-tight mb-4">CONSTRUIR O SEU SONHO <br><span class="text-primary">É A NOSSA MAIOR MOTIVAÇÃO!!!</span></h1>
-                <p class="text-neutral-300 text-base sm:text-lg mb-8">Especialistas em casas pré-fabricadas de alta durabilidade e beleza rústica. Transformamos madeira em lares acolhedores, unindo o rústico ao moderno.</p>
+                <!-- Título dinâmico -->
+                <h1 id="hero-titulo" class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl uppercase leading-tight mb-4">CONSTRUIR O SEU SONHO <br><span class="text-primary">É A NOSSA MAIOR MOTIVAÇÃO!!!</span></h1>
+                <!-- Subtítulo dinâmico -->
+                <p id="hero-subtitulo" class="text-neutral-300 text-base sm:text-lg mb-8">Especialistas em casas pré-fabricadas de alta durabilidade e beleza rústica. Transformamos madeira em lares acolhedores, unindo o rústico ao moderno.</p>
                 <a href="#contato" class="inline-block bg-primary hover:bg-primary-hover text-white font-heading font-semibold py-3 px-8 rounded transition-all shadow-xl">Solicitar Orçamento</a>
             </div>
         </div>
@@ -228,9 +230,9 @@
                     </div>
                 </div>
 
-                <!-- Obra 2: Chalé (Imagem Atualizada) -->
+                <!-- Obra 2: Chalé (Imagem Dinâmica com ID img-chale) -->
                 <div class="bg-card rounded-xl overflow-hidden shadow-xl border border-[#3a2e24] grid grid-cols-1 md:grid-cols-2 gap-0">
-                    <div class="h-72 md:h-auto bg-cover bg-center md:order-2" style="background-image: url('https://i.pinimg.com/736x/8e/48/ef/8e48eff2a4fa2130947dc77562342aa4.jpg');"></div>
+                    <div id="img-chale" class="h-72 md:h-auto bg-cover bg-center md:order-2" style="background-image: url('https://i.pinimg.com/736x/8e/48/ef/8e48eff2a4fa2130947dc77562342aa4.jpg');"></div>
                     <div class="p-8 flex flex-col justify-center md:order-1">
                         <span class="text-primary text-xs font-heading font-bold tracking-widest uppercase mb-2">Chalé Aconchegante</span>
                         <h3 class="font-heading font-bold text-2xl mb-4 text-white">Chalé Rústico</h3>
@@ -254,9 +256,9 @@
                     </div>
                 </div>
 
-                <!-- Obra 4: Móveis Rústicos (Imagem Atualizada) -->
+                <!-- Obra 4: Móveis Rústicos (Imagem Dinâmica com ID img-moveis) -->
                 <div class="bg-card rounded-xl overflow-hidden shadow-xl border border-[#3a2e24] grid grid-cols-1 md:grid-cols-2 gap-0">
-                    <div class="h-72 md:h-auto bg-cover bg-center md:order-2" style="background-image: url('https://i.pinimg.com/736x/4c/63/26/4c6326aa969d142f1da38e970561dff8.jpg');"></div>
+                    <div id="img-moveis" class="h-72 md:h-auto bg-cover bg-center md:order-2" style="background-image: url('https://i.pinimg.com/736x/4c/63/26/4c6326aa969d142f1da38e970561dff8.jpg');"></div>
                     <div class="p-8 flex flex-col justify-center md:order-1">
                         <span class="text-primary text-xs font-heading font-bold tracking-widest uppercase mb-2">Decoração e Conforto</span>
                         <h3 class="font-heading font-bold text-2xl mb-4 text-white">Móveis Rústicos Sob Medida</h3>
@@ -307,7 +309,46 @@
         </div>
     </footer>
 
-    <!-- Chamada do arquivo JavaScript separado -->
-    <script src="script.js"></script>
+    <!-- Script unificado: Menu mobile + Leitura do conteudo.json -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- MENU MOBILE TOGGLE ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // --- CARREGAR CONTEÚDO DINÂMICO DO JSON ---
+            fetch('conteudo.json')
+                .then(response => response.json())
+                .then(data => {
+                    const tituloEl = document.getElementById('hero-titulo');
+                    if (tituloEl) {
+                        tituloEl.innerHTML = data.hero_titulo.replace('É A NOSSA MAIOR MOTIVAÇÃO!!!', '<br><span class="text-primary">É A NOSSA MAIOR MOTIVAÇÃO!!!</span>');
+                    }
+
+                    const subtituloEl = document.getElementById('hero-subtitulo');
+                    if (subtituloEl) subtituloEl.innerText = data.hero_subtitulo;
+
+                    const chaleEl = document.getElementById('img-chale');
+                    if (chaleEl) chaleEl.style.backgroundImage = `url('${data.chale_imagem}')`;
+
+                    const moveisEl = document.getElementById('img-moveis');
+                    if (moveisEl) moveisEl.style.backgroundImage = `url('${data.moveis_imagem}')`;
+                })
+                .catch(error => console.log('Aguardando arquivo de conteúdo dinâmico...'));
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: Kottwitz/rusticosprefabricados
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "conteudo"
+    label: "Conteúdo do Site"
+    files:
+      - name: "home"
+        label: "Página Inicial"
+        file: "conteudo.json"
+        fields:
+          - {label: "Título do Banner (Hero)", name: "hero_titulo", widget: "string"}
+          - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "string"}
+          - {label: "Foto do Chalé", name: "chale_imagem", widget: "image"}
+          - {label: "Foto dos Móveis Rústicos", name: "moveis_imagem", widget: "image"}
