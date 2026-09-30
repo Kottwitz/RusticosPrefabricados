@@ -25,19 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            // Função auxiliar para definir texto com segurança
             const setText = (id, text) => {
                 const el = document.getElementById(id);
                 if (el && text) el.innerText = text;
             };
 
-            // Função auxiliar para definir imagens de fundo (Background-image)
             const setBgImage = (id, url) => {
                 const el = document.getElementById(id);
                 if (el && url) el.style.backgroundImage = `url('${url}')`;
             };
 
-            // Função auxiliar para definir atributos src de tags <img>
             const setImgSrc = (id, url) => {
                 const el = document.getElementById(id);
                 if (el && url) el.src = url;
@@ -46,12 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // --- CABEÇALHO E EMPRESA ---
             setText('empresa-nome', data.empresa_nome);
             setText('empresa-sub', data.empresa_sub);
+            setImgSrc('empresa-logo', data.empresa_logo);
             setText('footer-cnpj', data.footer_cnpj);
             setText('footer-endereco', data.footer_endereco);
 
             // --- WHATSAPP E REDES ---
             if (data.whatsapp_numero) {
-                const numLimpo = data.whatsapp_numero.replace(/\D/g, ''); // Garante apenas números
+                const numLimpo = data.whatsapp_numero.replace(/\D/g, '');
                 const whatsLink = `https://wa.me/${numLimpo}`;
                 const whatsLinkMsg = `https://wa.me/${numLimpo}?text=Olá!%20Gostaria%20de%20tirar%20dúvidas%20e%20fazer%20um%20orçamento.`;
 
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (btnMain) btnMain.href = whatsLinkMsg;
                 if (linkFooter) {
                     linkFooter.href = whatsLink;
-                    // Formata bonitinho para exibição (ex: (47) 9162-8419 se tiver 12/13 dígitos)
                     if (numLimpo.length >= 12) {
                         const ddd = numLimpo.slice(2, 4);
                         const parte1 = numLimpo.slice(4, 9);
@@ -82,30 +79,36 @@ document.addEventListener('DOMContentLoaded', () => {
             setText('hero-subtitulo', data.hero_subtitulo);
             setBgImage('hero', data.hero_imagem);
 
-            // --- SERVIÇOS / TIPOS (1 a 6) ---
-            for (let i = 1; i <= 6; i++) {
-                setText(`serv-tit-${i}`, data[`serv_tit_${i}`]);
-                setText(`serv-desc-${i}`, data[`serv_desc_${i}`]);
-                setBgImage(`serv-img-${i}`, data[`serv_img_${i}`]);
+            // --- SERVIÇOS / TIPOS (Dinâmico via Array) ---
+            if (data.servicos && Array.isArray(data.servicos)) {
+                data.servicos માટે /* loop */
+                data.servicos.forEach((serv, index) => {
+                    const i = index + 1;
+                    setText(`serv-tit-${i}`, serv.titulo);
+                    setText(`serv-desc-${i}`, serv.descricao);
+                    setBgImage(`serv-img-${i}`, serv.imagem);
+                });
             }
 
             // --- QUALIDADE ---
             setText('qualidade-titulo', data.qualidade_titulo);
             for (let i = 1; i <= 3; i++) {
                 setText(`qual-tit-${i}`, data[`qual_tit_${i}`]);
-                // Suporta quebras de linha nas descrições de qualidade
                 const qualDescEl = document.getElementById(`qual-desc-${i}`);
                 if (qualDescEl && data[`qual_desc_${i}`]) {
                     qualDescEl.innerHTML = data[`qual_desc_${i}`].replace(/\n/g, '<br>');
                 }
             }
 
-            // --- OBRAS (1 a 4) ---
-            for (let i = 1; i <= 4; i++) {
-                setText(`obra-tag-${i}`, data[`obra_tag_${i}`]);
-                setText(`obra-tit-${i}`, data[`obra_tit_${i}`]);
-                setText(`obra-desc-${i}`, data[`obra_desc_${i}`]);
-                setBgImage(`obra-img-${i}`, data[`obra_img_${i}`]);
+            // --- OBRAS (Dinâmico via Array) ---
+            if (data.obras && Array.isArray(data.obras)) {
+                data.obras.forEach((obra, index) => {
+                    const i = index + 1;
+                    setText(`obra-tag-${i}`, obra.tag);
+                    setText(`obra-tit-${i}`, obra.titulo);
+                    setText(`obra-desc-${i}`, obra.descricao);
+                    setBgImage(`obra-img-${i}`, obra.imagem);
+                });
             }
 
             // --- CONTATO ---
@@ -114,6 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
         .catch(error => {
-            console.warn('Aviso: Não foi possível carregar o conteúdo dinâmico (conteudo.json). O site continuará exibindo os dados padrão hardcoded.', error);
+            console.warn('Aviso: Não foi possível carregar o conteúdo dinâmico (conteudo.json).', error);
         });
 });
