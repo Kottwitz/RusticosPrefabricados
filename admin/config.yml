@@ -9,82 +9,69 @@ media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
 collections:
-  - name: "site"
-    label: "Gestão do Site"
-    folder: ""
-    create: false
-    extension: "json"
-    format: "json"
-    files:
-      # --- ABA 1: CABEÇALHO E RODAPÉ ---
-      - name: "geral"
-        label: "🌐 Cabeçalho e Rodapé"
-        file: "conteudo.json"
-        fields:
-          - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
-          - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
-          - {label: "Logotipo do Cabeçalho", name: "empresa_logo", widget: "image", hint: "Recomendado imagem PNG com fundo transparente."}
-          - {label: "Número do WhatsApp", name: "whatsapp_numero", widget: "string", hint: "Apenas números com DDI e DDD (ex: 554791628419)"}
-          - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
-          - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
+  - name: "cabecalho"
+    label: "🌐 Cabeçalho e Rodapé"
+    file: "conteudo.json"
+    fields:
+      - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
+      - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
+      - {label: "Logotipo do Cabeçalho", name: "empresa_logo", widget: "image", hint: "Recomendado imagem PNG com fundo transparente."}
+      - {label: "Número do WhatsApp", name: "whatsapp_numero", widget: "string", hint: "Apenas números com DDI e DDD (ex: 554791628419)"}
+      - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
+      - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
 
-      # --- ABA 2: BANNER PRINCIPAL (HERO) ---
-      - name: "hero"
-        label: "🎯 Banner Principal (Hero)"
-        file: "conteudo.json"
-        fields:
-          - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
-          - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "text"}
-          - {label: "Imagem de Fundo", name: "hero_imagem", widget: "image", hint: "Resolução recomendada: Alta qualidade (1920x1080px)."}
+  - name: "hero"
+    label: "🎯 Banner Principal (Hero)"
+    file: "conteudo.json"
+    fields:
+      - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
+      - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "text"}
+      - {label: "Imagem de Fundo", name: "hero_imagem", widget: "image", hint: "Resolução recomendada: Alta qualidade (1920x1080px)."}
 
-      # --- ABA 3: TIPOS E SERVIÇOS (LISTA DINÂMICA) ---
-      - name: "servicos"
-        label: "🏠 Tipos e Serviços"
-        file: "conteudo.json"
+  - name: "servicos"
+    label: "🏠 Tipos e Serviços"
+    file: "conteudo.json"
+    fields:
+      - label: "Lista de Serviços"
+        name: "servicos"
+        widget: "list"
+        summary: "{{fields.titulo}}"
+        hint: "Adicione, remova ou reordene os tipos de casas e serviços oferecidos."
         fields:
-          - label: "Lista de Serviços"
-            name: "servicos"
-            widget: "list"
-            summary: "{{fields.titulo}}"
-            hint: "Adicione, remova ou reordene os tipos de casas e serviços oferecidos."
-            fields:
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Descrição", name: "descricao", widget: "text"}
-              - {label: "Imagem", name: "imagem", widget: "image"}
+          - {label: "Título", name: "titulo", widget: "string"}
+          - {label: "Descrição", name: "descricao", widget: "text"}
+          - {label: "Imagem", name: "imagem", widget: "image"}
 
-      # --- ABA 4: PADRÃO DE QUALIDADE ---
-      - name: "qualidade"
-        label: "⭐ Padrão de Qualidade"
-        file: "conteudo.json"
-        fields:
-          - {label: "Título da Seção", name: "qualidade_titulo", widget: "string"}
-          - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
-          - {label: "Qualidade 1 - Descrição", name: "qual_desc_1", widget: "text"}
-          - {label: "Qualidade 2 - Título", name: "qual_tit_2", widget: "string"}
-          - {label: "Qualidade 2 - Descrição", name: "qual_desc_2", widget: "text"}
-          - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
-          - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
+  - name: "qualidade"
+    label: "⭐ Padrão de Qualidade"
+    file: "conteudo.json"
+    fields:
+      - {label: "Título da Seção", name: "qualidade_titulo", widget: "string"}
+      - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
+      - {label: "Qualidade 1 - Descrição", name: "qual_desc_1", widget: "text"}
+      - {label: "Qualidade 2 - Título", name: "qual_tit_2", widget: "string"}
+      - {label: "Qualidade 2 - Descrição", name: "qual_desc_2", widget: "text"}
+      - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
+      - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
 
-      # --- ABA 5: OBRAS E PORTFÓLIO (LISTA DINÂMICA) ---
-      - name: "obras"
-        label: "🏗️ Obras e Portfólio"
-        file: "conteudo.json"
+  - name: "obras"
+    label: "🏗️ Obras e Portfólio"
+    file: "conteudo.json"
+    fields:
+      - label: "Lista de Obras"
+        name: "obras"
+        widget: "list"
+        summary: "{{fields.titulo}} ({{fields.tag}})"
+        hint: "Gerencie os projetos exibidos na galeria de portfólio."
         fields:
-          - label: "Lista de Obras"
-            name: "obras"
-            widget: "list"
-            summary: "{{fields.titulo}} ({{fields.tag}})"
-            hint: "Gerencie os projetos exibidos na galeria de portfólio."
-            fields:
-              - {label: "Tag / Categoria", name: "tag", widget: "string"}
-              - {label: "Título da Obra", name: "titulo", widget: "string"}
-              - {label: "Descrição", name: "descricao", widget: "text"}
-              - {label: "Imagem", name: "imagem", widget: "image"}
+          - {label: "Tag / Categoria", name: "tag", widget: "string"}
+          - {label: "Título da Obra", name: "titulo", widget: "string"}
+          - {label: "Descrição", name: "descricao", widget: "text"}
+          - {label: "Imagem", name: "imagem", widget: "image"}
 
-      # --- ABA 6: CONTATO ---
-      - name: "contato"
-        label: "📞 Seção de Contato"
-        file: "conteudo.json"
-        fields:
-          - {label: "Título da Seção", name: "contato_titulo", widget: "string"}
-          - {label: "Texto de Chamada para Ação", name: "contato_texto", widget: "text"}
+  - name: "contato"
+    label: "📞 Seção de Contato"
+    file: "conteudo.json"
+    fields:
+      - {label: "Título da Seção", name: "contato_titulo", widget: "string"}
+      - {label: "Texto de Chamada para Ação", name: "contato_texto", widget: "text"}
