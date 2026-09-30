@@ -13,76 +13,103 @@ collections:
     label: "Conteúdo do Site"
     files:
       - name: "home"
-        label: "Página Inicial"
+        label: "Gerenciar Site"
         file: "conteudo.json"
         fields:
-          # CABEÇALHO E RODAPÉ
-          - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
-          - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
-          - {label: "Número do WhatsApp (ex: 554791628419)", name: "whatsapp_numero", widget: "string"}
-          - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
-          - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
+          # --- BLOCO 1: CABEÇALHO E RODAPÉ ---
+          - label: "Cabeçalho e Informações Gerais"
+            name: "secao_geral"
+            widget: "object"
+            fields:
+              - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
+              - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
+              - {label: "Número do WhatsApp (ex: 554791628419)", name: "whatsapp_numero", widget: "string"}
+              - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
+              - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
 
-          # BANNER PRINCIPAL (HERO)
-          - {label: "Título do Banner (Hero)", name: "hero_titulo", widget: "string"}
-          - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "string"}
-          - {label: "Imagem de Fundo do Banner", name: "hero_imagem", widget: "image"}
+          # --- BLOCO 2: BANNER PRINCIPAL (HERO) ---
+          - label: "Banner Principal (Hero)"
+            name: "secao_hero"
+            widget: "object"
+            fields:
+              - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
+              - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "string"}
+              - {label: "Imagem de Fundo do Banner", name: "hero_imagem", widget: "image"}
 
-          # SERVIÇOS / TIPOS (1 a 6)
-          - {label: "Serviço 1 - Título", name: "serv_tit_1", widget: "string"}
-          - {label: "Serviço 1 - Descrição", name: "serv_desc_1", widget: "text"}
-          - {label: "Serviço 1 - Imagem", name: "serv_img_1", widget: "image"}
+          # --- BLOCO 3: TIPOS / SERVIÇOS ---
+          - label: "Tipos e Serviços (1 a 6)"
+            name: "secao_servicos"
+            widget: "object"
+            fields:
+              - {label: "Serviço 1 - Título", name: "serv_tit_1", widget: "string"}
+              - {label: "Serviço 1 - Descrição", name: "serv_desc_1", widget: "text"}
+              - {label: "Serviço 1 - Imagem", name: "serv_img_1", widget: "image"}
 
-          - {label: "Serviço 2 - Título", name: "serv_tit_2", widget: "string"}
-          - {label: "Serviço 2 - Descrição", name: "serv_desc_2", widget: "text"}
-          - {label: "Serviço 2 - Imagem", name: "serv_img_2", widget: "image"}
+              - {label: "Serviço 2 - Título", name: "serv_tit_2", widget: "string"}
+              - {label: "Serviço 2 - Descrição", name: "serv_desc_2", widget: "text"}
+              - {label: "Serviço 2 - Imagem", name: "serv_img_2", widget: "image"}
 
-          - {label: "Serviço 3 - Título", name: "serv_tit_3", widget: "string"}
-          - {label: "Serviço 3 - Descrição", name: "serv_desc_3", widget: "text"}
-          - {label: "Serviço 3 - Imagem", name: "serv_img_3", widget: "image"}
+              - {label: "Serviço 3 - Título", name: "serv_tit_3", widget: "string"}
+              - {label: "Serviço 3 - Descrição", name: "serv_desc_3", widget: "text"}
+              - {label: "Serviço 3 - Imagem", name: "serv_img_3", widget: "image"}
 
-          - {label: "Serviço 4 - Título", name: "serv_tit_4", widget: "string"}
-          - {label: "Serviço 4 - Descrição", name: "serv_desc_4", widget: "text"}
-          - {label: "Serviço 4 - Imagem", name: "serv_img_4", widget: "image"}
+              - {label: "Serviço 4 - Título", name: "serv_tit_4", widget: "string"}
+              - {label: "Serviço 4 - Descrição", name: "serv_desc_4", widget: "text"}
+              - {label: "Serviço 4 - Imagem", name: "serv_img_4", widget: "image"}
 
-          - {label: "Serviço 5 - Título", name: "serv_tit_5", widget: "string"}
-          - {label: "Serviço 5 - Descrição", name: "serv_desc_5", widget: "text"}
-          - {label: "Serviço 5 - Imagem", name: "serv_img_5", widget: "image"}
+              - {label: "Serviço 5 - Título", name: "serv_tit_5", widget: "string"}
+              - {label: "Serviço 5 - Descrição", name: "serv_desc_5", widget: "text"}
+              - {label: "Serviço 5 - Imagem", name: "serv_img_5", widget: "image"}
 
-          - {label: "Serviço 6 - Título", name: "serv_tit_6", widget: "string"}
-          - {label: "Serviço 6 - Descrição", name: "serv_desc_6", widget: "text"}
-          - {label: "Serviço 6 - Imagem", name: "serv_img_6", widget: "image"}
+              - {label: "Serviço 6 - Título", name: "serv_tit_6", widget: "string"}
+              - {label: "Serviço 6 - Descrição", name: "serv_desc_6", widget: "text"}
+              - {label: "Serviço 6 - Imagem", name: "serv_img_6", widget: "image"}
 
-          # PADRÃO DE QUALIDADE
-          - {label: "Título da Qualidade", name: "qualidade_titulo", widget: "string"}
-          - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
-          - {label: "Qualidade 1 - Descrição", name: "qual_desc_1", widget: "text"}
-          - {label: "Qualidade 2 - Título", name: "qual_tit_2", widget: "string"}
-          - {label: "Qualidade 2 - Descrição", name: "qual_desc_2", widget: "text"}
-          - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
-          - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
+          # --- BLOCO 4: PADRÃO DE QUALIDADE ---
+          - label: "Padrão de Qualidade"
+            name: "secao_qualidade"
+            widget: "object"
+            fields:
+              - {label: "Título da Qualidade", name: "qualidade_titulo", widget: "string"}
+              
+              - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
+              - {label: "Qualidade 1 - Descrição", name: "qual_desc_1", widget: "text"}
+              
+              - {label: "Qualidade 2 - Título", name: "qual_tit_2", widget: "string"}
+              - {label: "Qualidade 2 - Descrição", name: "qual_desc_2", widget: "text"}
+              
+              - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
+              - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
 
-          # OBRAS (1 a 4)
-          - {label: "Obra 1 - Tag/Categoria", name: "obra_tag_1", widget: "string"}
-          - {label: "Obra 1 - Título", name: "obra_tit_1", widget: "string"}
-          - {label: "Obra 1 - Descrição", name: "obra_desc_1", widget: "text"}
-          - {label: "Obra 1 - Imagem", name: "obra_img_1", widget: "image"}
+          # --- BLOCO 5: OBRAS E TRABALHOS ---
+          - label: "Obras e Portfólio (1 a 4)"
+            name: "secao_obras"
+            widget: "object"
+            fields:
+              - {label: "Obra 1 - Tag/Categoria", name: "obra_tag_1", widget: "string"}
+              - {label: "Obra 1 - Título", name: "obra_tit_1", widget: "string"}
+              - {label: "Obra 1 - Descrição", name: "obra_desc_1", widget: "text"}
+              - {label: "Obra 1 - Imagem", name: "obra_img_1", widget: "image"}
 
-          - {label: "Obra 2 - Tag/Categoria", name: "obra_tag_2", widget: "string"}
-          - {label: "Obra 2 - Título", name: "obra_tit_2", widget: "string"}
-          - {label: "Obra 2 - Descrição", name: "obra_desc_2", widget: "text"}
-          - {label: "Obra 2 - Imagem", name: "obra_img_2", widget: "image"}
+              - {label: "Obra 2 - Tag/Categoria", name: "obra_tag_2", widget: "string"}
+              - {label: "Obra 2 - Título", name: "obra_tit_2", widget: "string"}
+              - {label: "Obra 2 - Descrição", name: "obra_desc_2", widget: "text"}
+              - {label: "Obra 2 - Imagem", name: "obra_img_2", widget: "image"}
 
-          - {label: "Obra 3 - Tag/Categoria", name: "obra_tag_3", widget: "string"}
-          - {label: "Obra 3 - Título", name: "obra_tit_3", widget: "string"}
-          - {label: "Obra 3 - Descrição", name: "obra_desc_3", widget: "text"}
-          - {label: "Obra 3 - Imagem", name: "obra_img_3", widget: "image"}
+              - {label: "Obra 3 - Tag/Categoria", name: "obra_tag_3", widget: "string"}
+              - {label: "Obra 3 - Título", name: "obra_tit_3", widget: "string"}
+              - {label: "Obra 3 - Descrição", name: "obra_desc_3", widget: "text"}
+              - {label: "Obra 3 - Imagem", name: "obra_img_3", widget: "image"}
 
-          - {label: "Obra 4 - Tag/Categoria", name: "obra_tag_4", widget: "string"}
-          - {label: "Obra 4 - Título", name: "obra_tit_4", widget: "string"}
-          - {label: "Obra 4 - Descrição", name: "obra_desc_4", widget: "text"}
-          - {label: "Obra 4 - Imagem", name: "obra_img_4", widget: "image"}
+              - {label: "Obra 4 - Tag/Categoria", name: "obra_tag_4", widget: "string"}
+              - {label: "Obra 4 - Título", name: "obra_tit_4", widget: "string"}
+              - {label: "Obra 4 - Descrição", name: "obra_desc_4", widget: "text"}
+              - {label: "Obra 4 - Imagem", name: "obra_img_4", widget: "image"}
 
-          # CONTATO
-          - {label: "Título da Seção Contato", name: "contato_titulo", widget: "string"}
-          - {label: "Texto da Seção Contato", name: "contato_texto", widget: "text"}
+          # --- BLOCO 6: CONTATO ---
+          - label: "Seção de Contato"
+            name: "secao_contato"
+            widget: "object"
+            fields:
+              - {label: "Título da Seção Contato", name: "contato_titulo", widget: "string"}
+              - {label: "Texto da Seção Contato", name: "contato_texto", widget: "text"}
