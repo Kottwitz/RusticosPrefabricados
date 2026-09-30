@@ -14,7 +14,7 @@ collections:
     files:
       - name: "cabecalho"
         label: "🌐 Cabeçalho e Rodapé"
-        file: "conteudo.json"
+        file: "conteudo-cabecalho.json"
         fields:
           - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
           - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
@@ -25,7 +25,7 @@ collections:
 
       - name: "hero"
         label: "🎯 Banner Principal (Hero)"
-        file: "conteudo.json"
+        file: "conteudo-hero.json"
         fields:
           - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
           - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "text"}
@@ -33,7 +33,7 @@ collections:
 
       - name: "servicos"
         label: "🏠 Tipos e Serviços"
-        file: "conteudo.json"
+        file: "conteudo-servicos.json"
         fields:
           - label: "Lista de Serviços"
             name: "servicos"
@@ -47,7 +47,7 @@ collections:
 
       - name: "qualidade"
         label: "⭐ Padrão de Qualidade"
-        file: "conteudo.json"
+        file: "conteudo-qualidade.json"
         fields:
           - {label: "Título da Seção", name: "qualidade_titulo", widget: "string"}
           - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
@@ -59,7 +59,7 @@ collections:
 
       - name: "obras"
         label: "🏗️ Obras e Portfólio"
-        file: "conteudo.json"
+        file: "conteudo-obras.json"
         fields:
           - label: "Lista de Obras"
             name: "obras"
@@ -74,7 +74,7 @@ collections:
 
       - name: "contato"
         label: "📞 Seção de Contato"
-        file: "conteudo.json"
+        file: "conteudo-contato.json"
         fields:
           - {label: "Título da Seção", name: "contato_titulo", widget: "string"}
           - {label: "Texto de Chamada para Ação", name: "contato_texto", widget: "text"}
