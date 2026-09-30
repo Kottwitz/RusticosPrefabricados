@@ -16,14 +16,11 @@ collections:
         label: "Página Inicial"
         file: "conteudo.json"
         fields:
-          # CABEÇALHO E CONTATO GERAL
+          # CABEÇALHO E RODAPÉ
           - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
           - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
-          - {label: "Número do WhatsApp (com DDI e DDD)", name: "whatsapp_numero", widget: "string"}
-          - {label: "Texto Exibido do WhatsApp", name: "whatsapp_texto", widget: "string"}
-          - {label: "Instagram (Handle/Link)", name: "instagram_link", widget: "string"}
-          - {label: "CNPJ", name: "footer_cnpj", widget: "string"}
-          - {label: "Endereço", name: "footer_endereco", widget: "string"}
+          - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
+          - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
 
           # BANNER PRINCIPAL (HERO)
           - {label: "Título do Banner (Hero)", name: "hero_titulo", widget: "string"}
@@ -64,7 +61,7 @@ collections:
           - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
           - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
 
-          # OBRAS E TRABALHOS (1 a 4)
+          # OBRAS (1 a 4)
           - {label: "Obra 1 - Tag/Categoria", name: "obra_tag_1", widget: "string"}
           - {label: "Obra 1 - Título", name: "obra_tit_1", widget: "string"}
           - {label: "Obra 1 - Descrição", name: "obra_desc_1", widget: "text"}
@@ -85,6 +82,6 @@ collections:
           - {label: "Obra 4 - Descrição", name: "obra_desc_4", widget: "text"}
           - {label: "Obra 4 - Imagem", name: "obra_img_4", widget: "image"}
 
-          # SEÇÃO DE CONTATO
-          - {label: "Título da Seção de Contato", name: "contato_titulo", widget: "string"}
-          - {label: "Texto da Seção de Contato", name: "contato_texto", widget: "text"}
+          # CONTATO
+          - {label: "Título da Seção Contato", name: "contato_titulo", widget: "string"}
+          - {label: "Texto da Seção Contato", name: "contato_texto", widget: "text"}
