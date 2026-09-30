@@ -5,8 +5,8 @@ backend:
   base_url: https://rusticosprefabricados.vercel.app
   auth_endpoint: api/auth
 
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
+media_folder: "img"
+public_folder: "/img"
 
 collections:
   - name: "site"
@@ -58,7 +58,7 @@ collections:
           - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
 
       - name: "obras"
-        label: "🏗️️ Obras e Portfólio"
+        label: "🏗 Obras e Portfólio"
         file: "conteudo-obras.json"
         fields:
           - label: "Lista de Obras"
