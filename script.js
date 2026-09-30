@@ -56,22 +56,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (el) el.style.backgroundImage = `url('${hero.hero_imagem}')`;
     }
 
-    // 3. TIPOS E SERVIÇOS (Se houver array dinâmico vindo do CMS)
-    if (servicos.servicos && servicos.servicos.length > 0) {
-      servicos.servicos.forEach((item, index) => {
-        const i = index + 1;
-        if (item.titulo) {
-          const tEl = document.getElementById(`serv-tit-${i}`);
-          if (tEl) tEl.textContent = item.titulo;
-        }
-        if (item.descricao) {
-          const dEl = document.getElementById(`serv-desc-${i}`);
-          if (dEl) dEl.textContent = item.descricao;
-        }
-        if (item.imagem) {
-          const imgEl = document.getElementById(`serv-img-${i}`);
-          if (imgEl) imgEl.style.backgroundImage = `url('${item.imagem}')`;
-        }
+    // 3. TIPOS E SERVIÇOS (Renderização Dinâmica Adaptada ao Painel Admin)
+    const containerServicos = document.querySelector('#servicos .grid');
+    if (servicos.servicos && servicos.servicos.length > 0 && containerServicos) {
+      containerServicos.innerHTML = ''; // Limpa os cards antigos estáticos do HTML
+      servicos.servicos.forEach(item => {
+        const cardHtml = `
+          <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
+              <div class="h-52 bg-cover bg-center bg-neutral-800" style="background-image: url('${item.imagem || 'https://images.pexels.com/photos/14459280/pexels-photo-14459280.jpeg'}');"></div>
+              <div class="p-6 flex flex-col flex-grow justify-between">
+                  <div>
+                      <h3 class="font-heading font-bold text-xl mb-2">${item.titulo || ''}</h3>
+                      <p class="text-neutral-400 text-sm mb-6">${item.descricao || ''}</p>
+                  </div>
+                  <div><a href="#contato" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-semibold text-sm py-2 px-4 rounded transition-all">Saiba Mais</a></div>
+              </div>
+          </div>
+        `;
+        containerServicos.innerHTML += cardHtml;
       });
     }
 
@@ -91,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // 5. OBRAS (Se houver array dinâmico vindo do CMS)
+    // 5. OBRAS
     if (obras.obras && obras.obras.length > 0) {
       obras.obras.forEach((item, index) => {
         const i = index + 1;

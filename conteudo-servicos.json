@@ -3,7 +3,32 @@
     {
       "titulo": "Casas Pré-Fabricadas",
       "descricao": "Estruturas modernas e ágeis com acabamento rústico impecável.",
-      "imagem": ""
+      "imagem": "https://images.pexels.com/photos/14459280/pexels-photo-14459280.jpeg"
+    },
+    {
+      "titulo": "Chalés",
+      "descricao": "Modelos aconchegantes com aparência robusta e rústica.",
+      "imagem": "https://i.pinimg.com/1200x/f3/d4/38/f3d4389d36644e8fd9c29ff3fe3698cd.jpg"
+    },
+    {
+      "titulo": "Sobrados",
+      "descricao": "Estruturas de dois andares otimizando o espaço do seu terreno.",
+      "imagem": "https://i.pinimg.com/736x/12/b2/67/12b267843c6d1234bd291f1bbae1845d.jpg"
+    },
+    {
+      "titulo": "Pergolados",
+      "descricao": "Estruturas externas elegantes e funcionais em madeira.",
+      "imagem": "https://i.pinimg.com/736x/e0/aa/f3/e0aaf3d83fdac3ec742fd98966121094.jpg"
+    },
+    {
+      "titulo": "Decks",
+      "descricao": "Pisos externos em madeira de lei de alta durabilidade.",
+      "imagem": "https://i.pinimg.com/736x/04/fc/75/04fc750434f3a6e6efae5f1cda90a4f0.jpg"
+    },
+    {
+      "titulo": "Móveis Rústicos",
+      "descricao": "Namoradeiras, bancos, mesas e peças exclusivas sob medida.",
+      "imagem": "https://i.pinimg.com/736x/18/b5/e5/18b5e5c7c4f71bec80a219a6f0cbc7bc.jpg"
     }
   ]
 }
