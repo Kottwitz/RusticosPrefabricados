@@ -5,6 +5,8 @@ backend:
   base_url: https://rusticosprefabricados.vercel.app
   auth_endpoint: api/auth
 
+  #att img
+
 media_folder: "img"
 public_folder: "/img"
 
