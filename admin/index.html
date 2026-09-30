@@ -1,11 +1,69 @@
-<!doctype html>
-html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel de Administração - Rústicos</title>
-  <!-- Injeção do CSS personalizado para o Admin -->
-  <link rel="stylesheet" href="admin.css" />
+  
+  <!-- Estilos customizados para forçar o Dark Mode Profissional no Decap CMS -->
+  <style>
+    /* Fundo geral e corpos do CMS */
+    html, body, div[data-netlify-cms-app], #nc-root {
+      background-color: #121212 !important;
+      color: #e5e5e5 !important;
+      font-family: 'Open Sans', sans-serif !important;
+    }
+
+    /* Barra superior (Header) */
+    header, [class*="AppHeader"] {
+      background-color: #1a1a1a !important;
+      border-bottom: 1px solid #2a2a2a !important;
+    }
+
+    /* Painel lateral de coleções e áreas de cartões */
+    [class*="SidebarContainer"], [class*="CollectionPage"], [class*="Card"] {
+      background-color: #1a1a1a !important;
+      color: #ffffff !important;
+      border-color: #2a2a2a !important;
+    }
+
+    /* Itens da lista de coleções */
+    [class*="CollectionCard"], [class*="Pane"] {
+      background-color: #1e1e1e !important;
+      border: 1px solid #2d241d !important;
+      border-radius: 8px !important;
+    }
+
+    /* Inputs, Textareas e Selects */
+    input, textarea, select {
+      background-color: #121212 !important;
+      border: 1px solid #333 !important;
+      color: #ffffff !important;
+      border-radius: 6px !important;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #d95d39 !important;
+      box-shadow: 0 0 0 2px rgba(217, 93, 57, 0.2) !important;
+    }
+
+    /* Botões de ação principais (Cor primária do site) */
+    button, [class*="Button"] {
+      background-color: #d95d39 !important;
+      color: #ffffff !important;
+      border-radius: 6px !important;
+      font-weight: 600 !important;
+    }
+
+    button:hover, [class*="Button"]:hover {
+      background-color: #b94b2a !important;
+    }
+
+    /* Títulos e textos gerais */
+    h1, h2, h3, h4, span, label {
+      color: #f3f4f6 !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Script do Decap CMS -->
