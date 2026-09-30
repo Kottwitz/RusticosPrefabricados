@@ -11,6 +11,10 @@ public_folder: "/img/uploads"
 collections:
   - name: "site"
     label: "Gestão do Site"
+    folder: ""
+    create: false
+    extension: "json"
+    format: "json"
     files:
       # --- ABA 1: CABEÇALHO E RODAPÉ ---
       - name: "geral"
