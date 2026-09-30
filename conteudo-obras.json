@@ -1,10 +1,28 @@
 {
   "obras": [
     {
-      "tag": "Residencial",
-      "titulo": "Casa de Campo Serra",
-      "descricao": "Projeto executado com acabamento em madeira nobre.",
-      "imagem": ""
+      "tag": "Projeto Residencial",
+      "titulo": "Sobrado Residencial",
+      "descricao": "Estrutura completa de dois pavimentos desenvolvida para otimizar o espaço do terreno, combinando a beleza rústica da madeira nobre com um layout interno moderno, amplo e confortável para toda a família.",
+      "imagem": "img/Sobrado.png"
+    },
+    {
+      "tag": "Chalé Aconchegante",
+      "titulo": "Chalé Rústico",
+      "descricao": "Modelo compacto e extremamente aconchegante, ideal para regiões serranas, praias ou sítios. Conta com excelente isolamento térmico, pé-direito duplo e acabamento impecável em madeira tratada.",
+      "imagem": "https://i.pinimg.com/736x/8e/48/ef/8e48eff2a4fa2130947dc77562342aa4.jpg"
+    },
+    {
+      "tag": "Área Externa",
+      "titulo": "Pergolados e Decks",
+      "descricao": "Soluções sofisticadas para valorizar áreas de lazer, jardins e piscinas. Construídos com madeiras de lei de alta resistência a intempéries, garantindo durabilidade e um visual elegante.",
+      "imagem": "img/estrutura.jpg"
+    },
+    {
+      "tag": "Decoração e Conforto",
+      "titulo": "Móveis Rústicos Sob Medida",
+      "descricao": "Peças exclusivas artesanais, como namoradeiras, bancos e mesas robustas, projetadas para complementar ambientes internos e externos com personalidade e charme rústico único.",
+      "imagem": "https://i.pinimg.com/736x/4c/63/26/4c6326aa969d142f1da38e970561dff8.jpg"
     }
   ]
 }

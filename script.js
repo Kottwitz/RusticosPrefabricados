@@ -56,10 +56,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (el) el.style.backgroundImage = `url('${hero.hero_imagem}')`;
     }
 
-    // 3. TIPOS E SERVIÇOS (Renderização Dinâmica Adaptada ao Painel Admin)
+    // 3. TIPOS E SERVIÇOS (Dinâmico)
     const containerServicos = document.querySelector('#servicos .grid');
     if (servicos.servicos && servicos.servicos.length > 0 && containerServicos) {
-      containerServicos.innerHTML = ''; // Limpa os cards antigos estáticos do HTML
+      containerServicos.innerHTML = '';
       servicos.servicos.forEach(item => {
         const cardHtml = `
           <div class="bg-card rounded-lg overflow-hidden shadow-xl border border-[#3a2e24] flex flex-col">
@@ -93,26 +93,27 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // 5. OBRAS
-    if (obras.obras && obras.obras.length > 0) {
+    // 5. OBRAS E TRABALHOS (Renderização Dinâmica com Layout Alternado)
+    const containerObras = document.querySelector('#obras .space-y-12');
+    if (obras.obras && obras.obras.length > 0 && containerObras) {
+      containerObras.innerHTML = '';
       obras.obras.forEach((item, index) => {
-        const i = index + 1;
-        if (item.titulo) {
-          const tEl = document.getElementById(`obra-tit-${i}`);
-          if (tEl) tEl.textContent = item.titulo;
-        }
-        if (item.tag) {
-          const tagEl = document.getElementById(`obra-tag-${i}`);
-          if (tagEl) tagEl.textContent = item.tag;
-        }
-        if (item.descricao) {
-          const dEl = document.getElementById(`obra-desc-${i}`);
-          if (dEl) dEl.textContent = item.descricao;
-        }
-        if (item.imagem) {
-          const imgEl = document.getElementById(`obra-img-${i}`);
-          if (imgEl) imgEl.style.backgroundImage = `url('${item.imagem}')`;
-        }
+        const isEven = index % 2 === 0;
+        const imageOrderClass = isEven ? '' : 'md:order-2';
+        const contentOrderClass = isEven ? '' : 'md:order-1';
+
+        const obraHtml = `
+          <div class="bg-card rounded-xl overflow-hidden shadow-xl border border-[#3a2e24] grid grid-cols-1 md:grid-cols-2 gap-0">
+              <div class="h-72 md:h-auto bg-cover bg-center ${imageOrderClass}" style="background-image: url('${item.imagem || 'https://images.pexels.com/photos/14459280/pexels-photo-14459280.jpeg'}');"></div>
+              <div class="p-8 flex flex-col justify-center ${contentOrderClass}">
+                  <span class="text-primary text-xs font-heading font-bold tracking-widest uppercase mb-2">${item.tag || ''}</span>
+                  <h3 class="font-heading font-bold text-2xl mb-4 text-white">${item.titulo || ''}</h3>
+                  <p class="text-neutral-300 text-sm leading-relaxed mb-6">${item.descricao || ''}</p>
+                  <a href="#contato" class="inline-block text-primary font-semibold text-sm hover:underline">Solicitar projeto semelhante &rarr;</a>
+              </div>
+          </div>
+        `;
+        containerObras.innerHTML += obraHtml;
       });
     }
 
