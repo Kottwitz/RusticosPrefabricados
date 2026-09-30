@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const el = document.getElementById('empresa-sub');
       if (el) el.textContent = cabecalho.empresa_sub;
     }
-    if (cabecalho.empresa_logo) {
+    if (cabecalho.empresa_logo && cabecalho.empresa_logo.trim() !== "") {
       const el = document.getElementById('logo-img');
       if (el) el.src = cabecalho.empresa_logo;
     }
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const el = document.getElementById('hero-subtitulo');
       if (el) el.textContent = hero.hero_subtitulo;
     }
-    if (hero.hero_imagem) {
+    if (hero.hero_imagem && hero.hero_imagem.trim() !== "") {
       const el = document.getElementById('hero');
       if (el) el.style.backgroundImage = `url('${hero.hero_imagem}')`;
     }
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // 5. OBRAS E TRABALHOS (Renderização Dinâmica com Layout Alternado)
+    // 5. OBRAS E TRABALHOS (Dinâmico com Layout Alternado)
     const containerObras = document.querySelector('#obras .space-y-12');
     if (obras.obras && obras.obras.length > 0 && containerObras) {
       containerObras.innerHTML = '';

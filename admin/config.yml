@@ -9,72 +9,75 @@ media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
 collections:
-  - name: "site"
-    label: "Gestão do Site"
-    files:
-      - name: "cabecalho"
-        label: "🌐 Cabeçalho e Rodapé"
-        file: "conteudo-cabecalho.json"
-        fields:
-          - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
-          - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
-          - {label: "Logotipo do Cabeçalho", name: "empresa_logo", widget: "image", required: false, hint: "Opcional. Deixe em branco para manter a imagem atual."}
-          - {label: "Número do WhatsApp", name: "whatsapp_numero", widget: "string", hint: "Apenas números com DDI e DDD (ex: 554791628419)"}
-          - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
-          - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
+  # 1. CABEÇALHO E RODAPÉ
+  - name: "cabecalho"
+    label: "🌐 Cabeçalho e Rodapé"
+    file: "conteudo-cabecalho.json"
+    fields:
+      - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
+      - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
+      - {label: "Logotipo do Cabeçalho", name: "empresa_logo", widget: "image", required: false, hint: "Opcional. Deixe em branco para manter a imagem atual."}
+      - {label: "Número do WhatsApp", name: "whatsapp_numero", widget: "string", hint: "Apenas números com DDI e DDD (ex: 554791628419)"}
+      - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
+      - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
 
-      - name: "hero"
-        label: "🎯 Banner Principal (Hero)"
-        file: "conteudo-hero.json"
-        fields:
-          - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
-          - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "text"}
-          - {label: "Imagem de Fundo", name: "hero_imagem", widget: "image", required: false, hint: "Opcional. Deixe em branco para manter a imagem atual."}
+  # 2. BANNER PRINCIPAL (HERO)
+  - name: "hero"
+    label: "🎯 Banner Principal (Hero)"
+    file: "conteudo-hero.json"
+    fields:
+      - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
+      - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "text"}
+      - {label: "Imagem de Fundo", name: "hero_imagem", widget: "image", required: false, hint: "Opcional. Deixe em branco para manter a imagem atual."}
 
-      - name: "servicos"
-        label: "🏠 Tipos e Serviços"
-        file: "conteudo-servicos.json"
+  # 3. TIPOS E SERVIÇOS
+  - name: "servicos"
+    label: "🏠 Tipos e Serviços"
+    file: "conteudo-servicos.json"
+    fields:
+      - label: "Lista de Serviços"
+        name: "servicos"
+        widget: "list"
+        summary: "{{fields.titulo}}"
+        hint: "Adicione, remova ou reordene os tipos de casas e serviços oferecidos."
         fields:
-          - label: "Lista de Serviços"
-            name: "servicos"
-            widget: "list"
-            summary: "{{fields.titulo}}"
-            hint: "Adicione, remova ou reordene os tipos de casas e serviços oferecidos."
-            fields:
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Descrição", name: "descricao", widget: "text"}
-              - {label: "Imagem", name: "imagem", widget: "image", required: false}
+          - {label: "Título", name: "titulo", widget: "string"}
+          - {label: "Descrição", name: "descricao", widget: "text"}
+          - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
-      - name: "qualidade"
-        label: "⭐ Padrão de Qualidade"
-        file: "conteudo-qualidade.json"
-        fields:
-          - {label: "Título da Seção", name: "qualidade_titulo", widget: "string"}
-          - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
-          - {label: "Qualidade 1 - Descrição", name: "qual_desc_1", widget: "text"}
-          - {label: "Qualidade 2 - Título", name: "qual_tit_2", widget: "string"}
-          - {label: "Qualidade 2 - Descrição", name: "qual_desc_2", widget: "text"}
-          - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
-          - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
+  # 4. PADRÃO DE QUALIDADE
+  - name: "qualidade"
+    label: "⭐ Padrão de Qualidade"
+    file: "conteudo-qualidade.json"
+    fields:
+      - {label: "Título da Seção", name: "qualidade_titulo", widget: "string"}
+      - {label: "Qualidade 1 - Título", name: "qual_tit_1", widget: "string"}
+      - {label: "Qualidade 1 - Descrição", name: "qual_desc_1", widget: "text"}
+      - {label: "Qualidade 2 - Título", name: "qual_tit_2", widget: "string"}
+      - {label: "Qualidade 2 - Descrição", name: "qual_desc_2", widget: "text"}
+      - {label: "Qualidade 3 - Título", name: "qual_tit_3", widget: "string"}
+      - {label: "Qualidade 3 - Descrição", name: "qual_desc_3", widget: "text"}
 
-      - name: "obras"
-        label: "🏗️ Obras e Portfólio"
-        file: "conteudo-obras.json"
+  # 5. OBRAS E PORTFÓLIO
+  - name: "obras"
+    label: "🏗️ Obras e Portfólio"
+    file: "conteudo-obras.json"
+    fields:
+      - label: "Lista de Obras"
+        name: "obras"
+        widget: "list"
+        summary: "{{fields.titulo}} ({{fields.tag}})"
+        hint: "Gerencie os projetos exibidos na galeria de portfólio."
         fields:
-          - label: "Lista de Obras"
-            name: "obras"
-            widget: "list"
-            summary: "{{fields.titulo}} ({{fields.tag}})"
-            hint: "Gerencie os projetos exibidos na galeria de portfólio."
-            fields:
-              - {label: "Tag / Categoria", name: "tag", widget: "string"}
-              - {label: "Título da Obra", name: "titulo", widget: "string"}
-              - {label: "Descrição", name: "descricao", widget: "text"}
-              - {label: "Imagem", name: "imagem", widget: "image", required: false}
+          - {label: "Tag / Categoria", name: "tag", widget: "string"}
+          - {label: "Título da Obra", name: "titulo", widget: "string"}
+          - {label: "Descrição", name: "descricao", widget: "text"}
+          - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
-      - name: "contato"
-        label: "📞 Seção de Contato"
-        file: "conteudo-contato.json"
-        fields:
-          - {label: "Título da Seção", name: "contato_titulo", widget: "string"}
-          - {label: "Texto de Chamada para Ação", name: "contato_texto", widget: "text"}
+  # 6. SEÇÃO DE CONTATO
+  - name: "contato"
+    label: "📞 Seção de Contato"
+    file: "conteudo-contato.json"
+    fields:
+      - {label: "Título da Seção", name: "contato_titulo", widget: "string"}
+      - {label: "Texto de Chamada para Ação", name: "contato_texto", widget: "text"}
