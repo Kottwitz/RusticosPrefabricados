@@ -18,7 +18,7 @@ collections:
         fields:
           - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
           - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
-          - {label: "Logotipo do Cabeçalho", name: "empresa_logo", widget: "image", hint: "Recomendado imagem PNG com fundo transparente."}
+          - {label: "Logotipo do Cabeçalho", name: "empresa_logo", widget: "image", required: false, hint: "Opcional. Deixe em branco para manter a imagem atual."}
           - {label: "Número do WhatsApp", name: "whatsapp_numero", widget: "string", hint: "Apenas números com DDI e DDD (ex: 554791628419)"}
           - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
           - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
@@ -29,7 +29,7 @@ collections:
         fields:
           - {label: "Título do Banner", name: "hero_titulo", widget: "string"}
           - {label: "Subtítulo do Banner", name: "hero_subtitulo", widget: "text"}
-          - {label: "Imagem de Fundo", name: "hero_imagem", widget: "image", hint: "Resolução recomendada: Alta qualidade (1920x1080px)."}
+          - {label: "Imagem de Fundo", name: "hero_imagem", widget: "image", required: false, hint: "Opcional. Deixe em branco para manter a imagem atual."}
 
       - name: "servicos"
         label: "🏠 Tipos e Serviços"
@@ -43,7 +43,7 @@ collections:
             fields:
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Descrição", name: "descricao", widget: "text"}
-              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
       - name: "qualidade"
         label: "⭐ Padrão de Qualidade"
@@ -70,7 +70,7 @@ collections:
               - {label: "Tag / Categoria", name: "tag", widget: "string"}
               - {label: "Título da Obra", name: "titulo", widget: "string"}
               - {label: "Descrição", name: "descricao", widget: "text"}
-              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
       - name: "contato"
         label: "📞 Seção de Contato"
