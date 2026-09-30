@@ -1,6 +1,73 @@
 {
-  "hero_titulo": "CONSTRUIR O SEU SONHO É A NOSSA MAIOR MOTIVAÇÃO!!!",
+  "whatsapp_numero": "554791628419",
+  "whatsapp_formatado": "(47) 9162-8419",
+  "whatsapp_mensagem": "Olá! Gostaria de tirar dúvidas e fazer um orçamento.",
+  "instagram_url": "https://instagram.com/rusticos.prefabricados",
+  "instagram_handle": "@rusticos.prefabricados",
+
+  "logo_img": "img/logo.png",
+  "empresa_nome": "RÚSTICOS",
+  "empresa_sub": "CASAS PRÉ-FABRICADAS",
+
+  "hero_titulo": "CONSTRUIR O SEU SONHO <br><span class=\"text-primary\">É A NOSSA MAIOR MOTIVAÇÃO!!!</span>",
   "hero_subtitulo": "Especialistas em casas pré-fabricadas de alta durabilidade e beleza rústica. Transformamos madeira em lares acolhedores, unindo o rústico ao moderno.",
-  "chale_imagem": "https://i.pinimg.com/736x/8e/48/ef/8e48eff2a4fa2130947dc77562342aa4.jpg",
-  "moveis_imagem": "https://i.pinimg.com/736x/4c/63/26/4c6326aa969d142f1da38e970561dff8.jpg"
+  "hero_bg": "https://images.pexels.com/photos/14459279/pexels-photo-14459279.jpeg",
+
+  "servico_1_titulo": "CASAS",
+  "servico_1_desc": "Projetos residenciais completos, do fundamento ao acabamento.",
+  "servico_1_img": "https://images.pexels.com/photos/14459280/pexels-photo-14459280.jpeg",
+
+  "servico_2_titulo": "CHALÉS",
+  "servico_2_desc": "Modelos aconchegantes com aparência robusta e rústica.",
+  "servico_2_img": "https://i.pinimg.com/1200x/f3/d4/38/f3d4389d36644e8fd9c29ff3fe3698cd.jpg",
+
+  "servico_3_titulo": "SOBRADOS",
+  "servico_3_desc": "Estruturas de dois andares otimizando o espaço do seu terreno.",
+  "servico_3_img": "https://i.pinimg.com/736x/12/b2/67/12b267843c6d1234bd291f1bbae1845d.jpg",
+
+  "servico_4_titulo": "PERGOLADOS",
+  "servico_4_desc": "Estruturas externas elegantes e funcionais em madeira.",
+  "servico_4_img": "https://i.pinimg.com/736x/e0/aa/f3/e0aaf3d83fdac3ec742fd98966121094.jpg",
+
+  "servico_5_titulo": "DECKS",
+  "servico_5_desc": "Pisos externos em madeira de lei de alta durabilidade.",
+  "servico_5_img": "https://i.pinimg.com/736x/04/fc/75/04fc750434f3a6e6efae5f1cda90a4f0.jpg",
+
+  "servico_6_titulo": "MÓVEIS RÚSTICOS",
+  "servico_6_desc": "Namoradeiras, bancos, mesas e peças exclusivas sob medida.",
+  "servico_6_img": "https://i.pinimg.com/736x/18/b5/e5/18b5e5c7c4f71bec80a219a6f0cbc7bc.jpg",
+
+  "qualidade_titulo": "O QUE VAI NAS NOSSAS CASAS!",
+  "qual_1_titulo": "Madeiras Nobres",
+  "qual_1_desc": "<strong>Pinus Tratado:</strong> Autoclave para resistência a insetos e intempéries.<br><br><strong>Angelin:</strong> Madeira de lei resistente a cupins.",
+  "qual_2_titulo": "Acabamentos",
+  "qual_2_desc": "Revestimentos cerâmicos em áreas molhadas. Portas externas em blindex incolor 8mm. Forro PVC branco com beiral de madeira.",
+  "qual_3_titulo": "Infraestrutura",
+  "qual_3_desc": "Elétrica com fios Corfio/Sil e tomadas Tramontina. Hidráulica Tigre. Telhas esmaltadas com manta térmica inclusa.",
+
+  "obra_1_tag": "Projeto Residencial",
+  "obra_1_titulo": "Sobrado Residencial",
+  "obra_1_desc": "Estrutura completa de dois pavimentos desenvolvida para otimizar o espaço do terreno, combinando a beleza rústica da madeira nobre com um layout interno moderno, amplo e confortável para toda a família.",
+  "obra_1_img": "img/Sobrado.png",
+
+  "obra_2_tag": "Chalé Aconchegante",
+  "obra_2_titulo": "Chalé Rústico",
+  "obra_2_desc": "Modelo compacto e extremamente aconchegante, ideal para regiões serranas, praias ou sítios. Conta com excelente isolamento térmico, pé-direito duplo e acabamento impecável em madeira tratada.",
+  "obra_2_img": "https://i.pinimg.com/736x/8e/48/ef/8e48eff2a4fa2130947dc77562342aa4.jpg",
+
+  "obra_3_tag": "Área Externa",
+  "obra_3_titulo": "Pergolados e Decks",
+  "obra_3_desc": "Soluções sofisticadas para valorizar áreas de lazer, jardins e piscinas. Construídos com madeiras de lei de alta resistência a intempéries, garantindo durabilidade e um visual elegante.",
+  "obra_3_img": "img/estrutura.jpg",
+
+  "obra_4_tag": "Decoração e Conforto",
+  "obra_4_titulo": "Móveis Rústicos Sob Medida",
+  "obra_4_desc": "Peças exclusivas artesanais, como namoradeiras, bancos e mesas robustas, projetadas para complementar ambientes internos e externos com personalidade e charme rústico único.",
+  "obra_4_img": "https://i.pinimg.com/736x/4c/63/26/4c6326aa969d142f1da38e970561dff8.jpg",
+
+  "contato_titulo": "FALE CONOSCO",
+  "contato_texto": "Tem alguma dúvida sobre nossos projetos, quer personalizar sua casa pré-fabricada ou precisa de um orçamento sob medida? Clique no botão abaixo para conversar diretamente com a nossa equipe via WhatsApp!",
+
+  "footer_cnpj": "CNPJ: 00.000.000/0000-00",
+  "footer_endereco": "Endereço da Construtora, 123 - Santa Catarina, SC"
 }
