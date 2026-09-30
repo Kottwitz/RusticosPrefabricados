@@ -19,6 +19,7 @@ collections:
           # CABEÇALHO E RODAPÉ
           - {label: "Nome da Empresa", name: "empresa_nome", widget: "string"}
           - {label: "Subtítulo da Empresa", name: "empresa_sub", widget: "string"}
+          - {label: "Número do WhatsApp (ex: 554791628419)", name: "whatsapp_numero", widget: "string"}
           - {label: "CNPJ (Rodapé)", name: "footer_cnpj", widget: "string"}
           - {label: "Endereço (Rodapé)", name: "footer_endereco", widget: "string"}
 
